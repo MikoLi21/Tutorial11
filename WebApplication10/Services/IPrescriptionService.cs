@@ -1,6 +1,9 @@
-﻿namespace WebApplication10.Services;
+﻿using WebApplication10.DTOs;
 
-public interface IPrescriptionService
+namespace WebApplication10.Services
 {
-    
+    public interface IPrescriptionService
+    {
+        Task<string> AddPrescriptionAsync(CreatePrescriptionRequest request);
+    }
 }
