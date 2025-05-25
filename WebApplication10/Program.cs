@@ -1,8 +1,10 @@
 using Microsoft.EntityFrameworkCore;
 using WebApplication10.Data; 
+using WebApplication10.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddScoped<IPrescriptionService, PrescriptionService>();
 
 builder.Services.AddControllers();
 builder.Services.AddDbContext<AppDbContext>(options =>
