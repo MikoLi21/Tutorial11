@@ -1,6 +1,9 @@
-﻿namespace WebApplication10.Services;
+﻿using WebApplication10.DTOs;
 
-public interface IPatientService
+namespace WebApplication10.Services
 {
-    
+    public interface IPatientService
+    {
+        Task<PatientDto?> GetPatientAsync(int id);
+    }
 }
